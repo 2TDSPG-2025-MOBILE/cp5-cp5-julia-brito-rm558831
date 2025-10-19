@@ -1,272 +1,95 @@
-# CP5 - Calculadora Científica
 
-## Objetivo
-Desenvolver uma **Calculadora Científica** utilizando **React Native**, aplicando os conceitos de componentes, estado, estilização e lógica de programação aprendidos em aula.
+# CP5 - Calculadora Científica SMARTCALC
 
----
+## Descrição
+A *SmatCalc* é um projeto de **calculadora científica** desenvolvida em **React Native**, com interface moderna e funcionalidades avançadas.  
+Ela permite realizar **operações básicas e científicas**, acompanhar o **histórico dos últimos cálculos** e possui um layout responsivo e agradável.
 
-## Descrição do Projeto
-
-Você deverá criar uma calculadora científica funcional que permita ao usuário realizar operações matemáticas básicas e científicas. O projeto deve seguir boas práticas de desenvolvimento, com código organizado, comentado e de fácil compreensão.
-
----
-
-##  Requisitos Técnicos
-
-### **Tecnologias Obrigatórias:**
-- React Native
-- Expo (recomendado para facilitar o desenvolvimento)
-- Hooks do React (useState, useEffect se necessário)
-
-### **O que deve ser entregue:**
-- Código-fonte completo do projeto
-- Arquivo README.md explicando como executar o projeto
-- Prints ou vídeo curto demonstrando o funcionamento
+O projeto segue **boas práticas de desenvolvimento**, incluindo:
+- Componentização clara (`Display`, `Button`, `ButtonGrid`, `CalculatorScreen`, `HistoryList`)  
+- Nomenclatura descritiva de variáveis e funções  
+- Comentários explicativos  
+- Tratamento de erros (como divisão por zero)  
 
 ---
+## Funcionalidades
 
-##  Funcionalidades Obrigatórias
+### Operações básicas
+- Adição (`+`), subtração (`-`), multiplicação (`×`), divisão (`÷`)  
+- Apagar último dígito (`DEL`)  
+- Limpar toda a expressão (`AC`)  
+- Porcentagem (`%`) com cálculo correto em expressões (ex: `12 + 15%`)  
 
-### **1. Interface do Usuário**
-- Display para mostrar a operação atual e o resultado
-- Botões numéricos de 0 a 9
-- Botões para operações básicas: adição (+), subtração (-), multiplicação (×) e divisão (÷)
-- Botão de igual (=) para executar o cálculo
-- Botão para limpar tudo (C ou AC)
-- Botão para apagar o último dígito (DEL ou ⌫)
-- Layout organizado e responsivo
+### Operações científicas
+- Raiz quadrada (`√`)  
+- Quadrado (`x²`)  
+- Seno (`sin`), cosseno (`cos`), tangente (`tan`)  
+- Constante π (`π`)  
 
-### **2. Operações Básicas**
-Sua calculadora deve realizar corretamente:
-- Adição
-- Subtração
-- Multiplicação
-- Divisão
-- Cálculos sequenciais (ex: 5 + 3 - 2 = 6)
+### Histórico de cálculos
+- Menu lateral acessível pelo botão **≡**  
+- Armazena os últimos 5 cálculos  
+- Possibilidade de limpar o histórico  
 
-### **3. Operações Científicas**
-Implemente as seguintes funções científicas:
-- **Potência**: x² (elevar ao quadrado)
-- **Raiz Quadrada**: √ (raiz quadrada)
-- **Trigonometria**: sin, cos, tan
-- **Porcentagem**: % (calcular porcentagem)
-- **Constantes**: π (número Pi)
-- **Decimais**: permitir números com vírgula/ponto
 
-### **4. Tratamento de Erros**
-- Divisão por zero deve exibir mensagem de erro
-- Operações inválidas devem ser tratadas adequadamente
-- Não permitir múltiplas operações consecutivas sem números
-
----
-
-## Funcionalidades Bônus (Opcional)
-
-### **Bônus 1: Histórico de Cálculos** (+10 pontos)
-- Armazenar os últimos 5 cálculos realizados
-- Exibir o histórico em uma lista visível ou em modal
-- Botão para limpar o histórico
-
-### **Bônus 2: Tema Claro/Escuro** (+10 pontos)
-- Implementar alternância entre modo claro e escuro
-- Botão de toggle para trocar entre os temas
-- Cores e estilos diferentes para cada modo
-- Transição suave entre os temas
-
----
-
-## Critérios de Avaliação
-
-### **1. Estrutura e Organização do Projeto (15 pontos)**
-| Critério | Pontos |
-|----------|--------|
-| Componentes separados em arquivos diferentes | 5 pts |
-| Código comentado explicando cada parte | 5 pts |
-| Nomenclatura clara de variáveis e funções | 5 pts |
-
-** Dica:** Crie arquivos separados para o Display, Botões e Tela principal. Comente explicando o que cada função faz e por quê!
-
----
-
-### **2. Interface do Usuário (20 pontos)**
-| Critério | Pontos |
-|----------|--------|
-| Layout responsivo e bem organizado | 8 pts |
-| Display mostrando operação e resultado | 7 pts |
-| Botões numéricos e de operações básicas | 5 pts |
-
-** Dica:** Use StyleSheet do React Native. Pense na experiência do usuário - botões grandes e fáceis de clicar!
-
----
-
-### **3. Funcionalidades Básicas (25 pontos)**
-| Critério | Pontos |
-|----------|--------|
-| Operações básicas (+, -, ×, ÷) funcionando | 8 pts |
-| Botão de limpar (C ou AC) | 5 pts |
-| Botão de apagar último dígito (DEL) | 5 pts |
-| Botão de igual (=) calculando corretamente | 4 pts |
-| Tratamento de erros (divisão por zero, etc.) | 3 pts |
-
-** Dica:** Teste cada operação várias vezes! Tente quebrar sua calculadora para encontrar bugs.
-
----
-
-### **4. Funcionalidades Científicas (25 pontos)**
-| Critério | Pontos |
-|----------|--------|
-| Operação de potência (x²) | 5 pts |
-| Raiz quadrada (√) | 5 pts |
-| Funções trigonométricas (sin, cos, tan) | 5 pts |
-| Porcentagem (%) | 5 pts |
-| Número Pi (π) e números decimais | 5 pts |
-
-** Dica:** Use Math.pow(), Math.sqrt(), Math.sin(), etc. do JavaScript. Lembre-se que as funções trigonométricas trabalham com radianos!
-
----
-
-### **5. Lógica e Estado (15 pontos)**
-| Critério | Pontos |
-|----------|--------|
-| Gerenciamento correto do estado com useState | 8 pts |
-| Lógica de cálculo funcionando sequencialmente | 7 pts |
-
-** Dica:** Planeje seu estado antes de começar a codificar. O que precisa ser armazenado? Número atual? Operação selecionada? Resultado anterior?
-
----
-
-### **6. Funcionalidades Bônus (Opcional)**
-
-#### **Bônus 1: Histórico de Cálculos (+10 pontos)**
-| Critério | Pontos |
-|----------|--------|
-| Armazenar últimos 5 cálculos | 4 pts |
-| Exibir histórico em lista rolável | 3 pts |
-| Permitir limpar o histórico | 3 pts |
-
-#### **Bônus 2: Modo Claro/Escuro (+10 pontos)**
-| Critério | Pontos |
-|----------|--------|
-| Botão de alternância entre temas | 4 pts |
-| Cores diferentes para cada modo | 4 pts |
-| Transição suave entre temas | 2 pts |
-
----
-
-## Pontuação Final
-
-| Categoria | Pontos Possíveis |
-|-----------|------------------|
-| **Total Base** | 100 pontos |
-| **Bônus 1** | +10 pontos |
-| **Bônus 2** | +10 pontos |
-| **MÁXIMO** | 120 pontos |
----
-
-## Estrutura de Pastas Sugerida
+## Estrutura do Projeto
 
 ```
-calculadora-cientifica/
+SmartCalc/
 ├── App.js
 ├── src/
 │   ├── components/
-│   │   ├── Display.js          // Exibe o resultado
-│   │   ├── Button.js           // Botão individual
-│   │   ├── ButtonGrid.js       // Grade de botões
-│   │   └── HistoryList.js      // (Bônus 1)
+│   │   ├── Button.js         
+│   │   ├── ButtonGrid.js          
+│   │   ├── Display.js     
+│   │   └── HistoryList.js     
 │   ├── screens/
-│   │   └── CalculatorScreen.js // Tela principal
+│   │   └── CalculatorScreen.js 
 │   └── utils/
-│       └── calculations.js     // Funções de cálculo
+│       └── calculations.js    
 └── README.md
 ```
 
 ---
+## Como acessar
 
-## Boas Práticas Obrigatórias
+1. Clone o projeto
+2. Entre na pasta do projeto
+   ```
+   cd SmartCalc
+   ```
+3. Baixe as dependencias
+   ```
+   npm install
+   ```
+4. Inicie o projeto com o Expo:
+   ```
+   npx expo start
+   ```
+5. Acesse o emulador ou abra no seu celular com o app **Expo Go.**
 
-### **1. Comentários no Código**
-```javascript
-// ERRADO - Sem comentários
-const [num, setNum] = useState(0);
+## Como usar
 
-// CORRETO - Com explicação
-// Estado que armazena o número atual digitado pelo usuário
-const [currentNumber, setCurrentNumber] = useState('0');
-```
-
-### **2. Separação de Componentes**
-```javascript
-// ERRADO - Tudo em um arquivo só
-// ... 500 linhas de código ...
-
-// CORRETO - Componentes separados
-// Display.js - apenas o display
-// Button.js - apenas o botão
-// CalculatorScreen.js - lógica principal
-```
-
-### **3. Nomenclatura Clara**
-```javascript
-// ERRADO - Nomes confusos
-const x = () => { ... }
-const btn = () => { ... }
-
-// CORRETO - Nomes descritivos
-const calculateResult = () => { ... }
-const handleButtonPress = () => { ... }
-```
+1. Digite números e operadores na tela.  
+2. Pressione `=` para calcular a expressão.  
+3. Pressione `AC` para limpar tudo.  
+4. Pressione `DEL` para apagar o último dígito.  
+5. Pressione `≡` para abrir o histórico lateral.  
+6. Use funções científicas clicando nos botões correspondentes.  
+7. Porcentagem (`%`) é calculada corretamente em expressões, incluindo cálculos parciais.  
 
 ---
 
-## Prazo de Entrega
-
-**Data de Entrega:** 20/10/2025 12h09min
-
-**Formato de Entrega:**
-- Link do repositório GitHub (preferencial)
-- OU arquivo .zip com o projeto completo
-- Incluir README.md com instruções de como executar
+## Autor
+Desenvolvido por **Julia Brito** **RM 558831*
 
 ---
 
-## Atenção!
+## Screenshots
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 19_d2a511b1](https://github.com/user-attachments/assets/4f172a4f-1cc2-47a0-9f66-6e8b8f161361)
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 19_4e1e59c4](https://github.com/user-attachments/assets/c00f0bbd-f083-4bf7-a519-4915528067f8)
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 19_37bf6775](https://github.com/user-attachments/assets/1505236f-bd1a-4696-ae40-fae991f8f727)
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 20_e0494185](https://github.com/user-attachments/assets/02657182-b7b5-40e8-adcb-b51976b9e89d)
 
-### **Será descontado pontos se:**
-- Código sem comentários explicativos
-- Tudo em um único arquivo
-- Funções não funcionarem corretamente
-- Código copiado sem entendimento (plágio será penalizado)
-- Não seguir a estrutura de pastas sugerida
 
-### **Pontos extras por:**
-- Código muito bem organizado e comentado
-- Criatividade no design (sem perder funcionalidade)
-- README.md bem escrito e detalhado
-- Commits organizados no GitHub
 
----
-
-## Dúvidas?
-
-- Tire suas dúvidas **antes** do prazo de entrega
-- Consulte a documentação oficial do React Native
-- Revise os conceitos vistos em aula
-- Use console.log() para debugar seu código
-
----
-
-## Objetivo de Aprendizado
-
-Esta atividade avalia sua capacidade de:
-- Criar interfaces com React Native
-- Gerenciar estado com Hooks
-- Implementar lógica de programação
-- Organizar e documentar código
-- Resolver problemas de forma independente
-
----
-
-**Boa sorte e bom código! 🚀**
-
-*Lembre-se: código limpo e bem comentado vale mais que código complexo e confuso!*
