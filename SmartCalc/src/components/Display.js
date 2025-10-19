@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#333',
   },
   expression: {
-    fontSize: 28,
+    fontSize: 30,
     color: '#aaa',
   },
   result: {
