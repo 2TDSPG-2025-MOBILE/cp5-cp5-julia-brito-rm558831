@@ -51,6 +51,22 @@ SmartCalc/
 ```
 
 ---
+## Como acessar
+
+1. Clone o projeto
+2. Entre na pasta do projeto
+   ```
+   cd SmartCalc
+   ```
+3. Baixe as dependencias
+   ```
+   npm install
+   ```
+4. Inicie o projeto com o Expo:
+   ```
+   npx expo start
+   ```
+5. Acesse o emulador ou abra no seu celular com o app **Expo Go.**
 
 ## Como usar
 
