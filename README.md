@@ -1,5 +1,5 @@
 
-# CP5 - Calculadora Científica
+# CP5 - Calculadora Científica SMARTCALC
 
 ## Descrição
 A *SmatCalc* é um projeto de **calculadora científica** desenvolvida em **React Native**, com interface moderna e funcionalidades avançadas.  
@@ -70,4 +70,10 @@ Desenvolvido por **Julia Brito** **RM 558831*
 ---
 
 ## Screenshots
-> 
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 19_d2a511b1](https://github.com/user-attachments/assets/4f172a4f-1cc2-47a0-9f66-6e8b8f161361)
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 19_4e1e59c4](https://github.com/user-attachments/assets/c00f0bbd-f083-4bf7-a519-4915528067f8)
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 19_37bf6775](https://github.com/user-attachments/assets/1505236f-bd1a-4696-ae40-fae991f8f727)
+> ![Imagem do WhatsApp de 2025-10-19 à(s) 17 39 20_e0494185](https://github.com/user-attachments/assets/02657182-b7b5-40e8-adcb-b51976b9e89d)
+
+
+
