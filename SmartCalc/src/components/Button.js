@@ -1,9 +1,12 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
+
+// Componente que representa um botão da calculadora
 export default function Button({ label, onPress, type = 'number' }) {
   let buttonStyle;
 
+  // Define o estilo do botão com base no tipo ou label específico
   if (label === 'DEL') {
     buttonStyle = styles.deleteButton; 
   } else if (type === 'operator') {

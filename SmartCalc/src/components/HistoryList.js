@@ -5,6 +5,7 @@ export default function HistoryList({ visible, onClose, history, clearHistory })
   // Animação de slide
   const slideAnim = React.useRef(new Animated.Value(-300)).current; // começa fora da tela
 
+    // useEffect para animar o slide quando o valor de "visible" mudar
   React.useEffect(() => {
     Animated.timing(slideAnim, {
       toValue: visible ? 0 : -300, // entra ou sai da tela

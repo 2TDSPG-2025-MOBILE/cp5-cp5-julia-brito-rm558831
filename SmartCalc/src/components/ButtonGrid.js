@@ -2,6 +2,7 @@
 import { View, StyleSheet } from 'react-native';
 import Button from './Button';
 
+// Matriz que define os botões do teclado da calculadora
 const BUTTON_ROWS = [
   [
     { label: 'AC', type: 'operator' },
@@ -43,6 +44,8 @@ const BUTTON_ROWS = [
   ],
 ];
 
+// Componente ButtonGrid
+// Renderiza todos os botões da calculadora em linhas
 export default function ButtonGrid({ onPress }) {
   return (
     <View style={styles.container}>

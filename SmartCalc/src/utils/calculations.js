@@ -1,5 +1,5 @@
 
-
+// Função principal que realiza os cálculos da calculadora
 export default function Calculate (expression, lastPressed) {
   try {
     let result = expression;
@@ -10,8 +10,9 @@ export default function Calculate (expression, lastPressed) {
         return '0';
 
       // Apagar último dígito
-     case 'DEL':
+     case ' DEL':
         return result.length > 1 ? result.slice(0, -1) : '0';
+      // Funções matemáticas
     case '√':
       return String(Math.sqrt(eval(result)));
     case 'x²':
