@@ -1,15 +1,57 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+
+import { View, StyleSheet } from 'react-native';
 import Button from './Button';
 
-export default function ButtonGrid({ onPress }) {
-  // Exemplo simples de grade com 4 botões
-  const buttons = ['1', '2', '3', '+'];
+const BUTTON_ROWS = [
+  [
+    { label: 'AC', type: 'operator' },
+    { label: '√', type: 'operator' },
+    { label: '%', type: 'operator' },
+    { label: '÷', type: 'operator' },
+  ],
+  [
+    { label: '7', type: 'number' },
+    { label: '8', type: 'number' },
+    { label: '9', type: 'number' },
+    { label: '×', type: 'operator' },
+  ],
+  [
+    { label: '4', type: 'number' },
+    { label: '5', type: 'number' },
+    { label: '6', type: 'number' },
+    { label: '-', type: 'operator' },
+  ],
+  [
+    { label: '1', type: 'number' },
+    { label: '2', type: 'number' },
+    { label: '3', type: 'number' },
+    { label: '+', type: 'operator' },
+  ],
+  [
+    { label: '0', type: 'number' },
+    { label: '.', type: 'number' },
+      { label: 'DEL', type: 'operator' },
+    { label: '=', type: 'operator' },
 
+  ],
+  [
+    { label: 'x²', type: 'function' },
+    { label: 'sin', type: 'function' },
+    { label: 'cos', type: 'function' },
+    { label: 'tan', type: 'function' },
+    { label: 'π', type: 'function' },
+  ],
+];
+
+export default function ButtonGrid({ onPress }) {
   return (
     <View style={styles.container}>
-      {buttons.map((label) => (
-        <Button key={label} label={label} onPress={() => onPress(label)} />
+       {BUTTON_ROWS.map((row, rowIndex) => (
+        <View key={rowIndex} style={styles.row}>
+          {row.map(({ label, type }) => (
+            <Button key={label} label={label} type={type} onPress={onPress} />
+          ))}
+        </View>
       ))}
     </View>
   );
@@ -17,9 +59,11 @@ export default function ButtonGrid({ onPress }) {
 
 const styles = StyleSheet.create({
   container: {
+    marginBottom: 20,
+  },
+  row: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    margin: 10,
+    justifyContent: 'space-around',
+    marginBottom: 10,
   },
 });
