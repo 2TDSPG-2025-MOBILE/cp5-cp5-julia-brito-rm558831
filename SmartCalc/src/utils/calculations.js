@@ -31,7 +31,12 @@ export default function Calculate (expression, lastPressed) {
         try {
             // Substitui × e ÷
           let expCalc = expression.replace(/×/g, '*').replace(/÷/g, '/');
-          
+
+          // Verifica se há divisão por zero
+          if (/\/0(?!\d)/.test(expCalc)) {
+            return 'Não é possível dividir por zero';
+          }
+
           // Substitui porcentagem considerando o número anterior
           expCalc = expCalc.replace(/(\d+)([\+\-\*\/])(\d+)%/g, '($1$2($1*$3*0.01))');
 
