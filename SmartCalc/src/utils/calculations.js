@@ -4,8 +4,6 @@ export default function Calculate (expression, lastPressed) {
   try {
     let result = expression;
 
-    result = result.replace(/×/g, '*').replace(/÷/g, '/');
-
     switch (lastPressed) {
       // Limpar tudo
       case 'AC':
@@ -27,13 +25,23 @@ export default function Calculate (expression, lastPressed) {
     case 'π':
       return expression === '0' ? String(Math.PI) : expression + String(Math.PI);
     case '%':
-      return String(eval(result) / 100);
-    case '=':
-      return String(eval(result));
-
+      return expression + '%';
       // Igual: calcula a expressão
-      case '=':
-        return String(eval(result));
+    case '=':
+        try {
+            // Substitui × e ÷
+          let expCalc = expression.replace(/×/g, '*').replace(/÷/g, '/');
+          
+          // Substitui porcentagem considerando o número anterior
+          expCalc = expCalc.replace(/(\d+)([\+\-\*\/])(\d+)%/g, '($1$2($1*$3*0.01))');
+
+          // Caso seja apenas um número com %, sem operador
+          expCalc = expCalc.replace(/^(\d+)%$/, '($1*0.01)');
+
+          return String(eval(expCalc));
+        } catch {
+          return 'Erro';
+  }
 
       default:
         // Para números e operadores
